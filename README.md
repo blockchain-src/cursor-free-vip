@@ -87,7 +87,6 @@ cd cursor-free-vip
   <img src="https://github.com/yeongpin/cursor-free-vip/blob/main/images/product_2025-04-16_10-40-21.png" alt="new" width="800" style="border-radius: 8px; margin-top: 10px;"/>
 </div>
 
----
 1. 输入 `3`，**关闭 Cursor 应用**。
 2. 输入 `1`，**重置机器 ID**。
 3. 输入 `2`、`5` 或 `6`，**注册 Cursor 账户**。
