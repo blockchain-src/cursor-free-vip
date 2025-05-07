@@ -84,7 +84,7 @@ cd cursor-free-vip
 ### 🤖 **互动式操作步骤**
 
 <div align="center">
-  <img src="https://github.com/yeongpin/cursor-free-vip/blob/main/images/product_2025-04-16_10-40-21.png" alt="new" width="800" style="border-radius: 8px; margin-top: 10px;"/>
+  <img src="main.png" alt="main" width="800" style="border-radius: 8px; margin-top: 10px;"/>
 </div>
 
 1. 输入 `3`，**关闭 Cursor 应用**。
