@@ -58,7 +58,7 @@
 
 ### 根据系统环境下载并运行脚本
 
-<details>
+<details open>
 <summary><b>Linux / WSL / macOS 系统</b></summary>
 
 ```bash
@@ -92,7 +92,8 @@ cd cursor-free-vip
 2. 输入 `1`，**重置机器 ID**。
 3. 输入 `2`、`5` 或 `6`，**注册 Cursor 账户**。
    > 如遇问题，也可前往官网 [https://www.cursor.com/cn](https://www.cursor.com/cn) 手动注册。
-4. 打开客户端"文件-首选项-Cursor settings"，点击 **log in**，连接官网账户，便可重新激活 VIP 功能。
+4. 打开客户端"文件-首选项-Cursor settings"，点击 **log in**，连接官网账户。
+🎉🎉完成以上，便可重新激活 VIP 功能。
 
 ---
 
