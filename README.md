@@ -1,74 +1,100 @@
-# ➤ Cursor Free VIP 简单教程
+# ✨ **Cursor Free VIP 简单教程**
 
 <div align="center">
-<p align="center">
-  <img src="./images/logo.png" alt="Cursor Pro Logo" width="200" style="border-radius: 6px;"/>
-</p>
+  <img src="./images/logo.png" alt="Cursor Pro Logo" width="180" style="border-radius: 8px; margin-bottom: 10px;"/>
+</div>
 
 <p align="center">
-
-[![Release](https://img.shields.io/endpoint?url=https://api.pinstudios.net/api/badges/release/yeongpin/cursor-free-vip)](https://github.com/yeongpin/cursor-free-vip/releases/latest)
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-[![Stars](https://img.shields.io/endpoint?url=https://api.pinstudios.net/api/badges/stars/yeongpin/cursor-free-vip)](https://github.com/yeongpin/cursor-free-vip/stargazers)
-[![Downloads](https://img.shields.io/endpoint?url=https://api.pinstudios.net/api/badges/downloads/yeongpin/cursor-free-vip/total)](https://github.com/yeongpin/cursor-free-vip/releases/latest)
-<a href="https://buymeacoffee.com/yeongpin" target="_blank"><img alt="Buy Me a Coffee" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support%20Me-FFDA33"></a>
- [<img src="https://devin.ai/assets/deepwiki-badge.png" alt="Ask DeepWiki.com" height="20"/>](https://deepwiki.com/yeongpin/cursor-free-vip)
-
+  <a href="https://github.com/yeongpin/cursor-free-vip/releases/latest">
+    <img src="https://img.shields.io/endpoint?url=https://api.pinstudios.net/api/badges/release/yeongpin/cursor-free-vip" alt="Release"/>
+  </a>
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+    <img src="https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg" alt="License"/>
+  </a>
+  <a href="https://github.com/yeongpin/cursor-free-vip/stargazers">
+    <img src="https://img.shields.io/endpoint?url=https://api.pinstudios.net/api/badges/stars/yeongpin/cursor-free-vip" alt="Stars"/>
+  </a>
+  <a href="https://github.com/yeongpin/cursor-free-vip/releases/latest">
+    <img src="https://img.shields.io/endpoint?url=https://api.pinstudios.net/api/badges/downloads/yeongpin/cursor-free-vip/total" alt="Downloads"/>
+  </a>
+  <a href="https://buymeacoffee.com/yeongpin" target="_blank">
+    <img alt="Buy Me a Coffee" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support%20Me-FFDA33">
+  </a>
+  <a href="https://deepwiki.com/yeongpin/cursor-free-vip" target="_blank">
+    <img src="https://devin.ai/assets/deepwiki-badge.png" alt="Ask DeepWiki.com" height="20"/>
+  </a>
 </p>
 
+---
 
-<a href="https://trendshift.io/repositories/13425" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13425" alt="yeongpin%2Fcursor-free-vip | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-<br>
-<a href="https://www.buymeacoffee.com/yeongpin" target="_blank">
-      <img src="https://img.buymeacoffee.com/button-api/?text=buy me a coffee&emoji=☕&slug=yeongpin&button_colour=ffda33&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=FFDD00&latest=2" width="160" height='55' alt="Buy Me a Coffee"/>
-</a>
+## 🖥️ **支持平台**
 
+- ![Windows](https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white)
+- ![macOS](https://img.shields.io/badge/-macOS-000000?logo=apple&logoColor=white)
+- ![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)
 
-<h4>Support Latest 0.49.x Version | 支持最新 0.49.x 版本</h4>
+> ⚡ **建议以管理员身份运行，并保持最新版本以获得最佳体验。**
 
-支持 Windows、macOS 和 Linux。
+---
 
-对于最佳性能，请以管理员身份运行并始终保持最新版本。
+## 🚀 **快速开始**
 
+### 1️⃣ 前提条件
 
-## 👀 如何使用
+- 已安装 [Cursor 客户端](https://www.cursor.com/cn)
+- 已登录 Cursor 账户（如已登录，建议先在"文件-首选项-Cursor settings"中点击 **log out** 退出账户）
 
-<details open>
-<summary><b>⭐ 前提条件</b></summary>
-如果你还未安装客户端，请访问 [https://www.cursor.com/cn](https://www.cursor.com/cn) 下载并安装。
+---
 
-如果你已安装并登录了客户端账户，打开“文件-首选项-Cursor settings”，点击 **log out** 账户。
+### 2️⃣ 下载并运行脚本
 
-
-<summary><b>⭐ 下载并运行脚本</b></summary>
-
-### **Linux/WSL/macOS**
+<details>
+<summary><b>Linux / WSL / macOS</b></summary>
 
 ```bash
-git clone https://github.com/blockchain-src/cursor-free-vip.git && cd cursor-free-vip && chmod +x install.sh && ./install.sh
+git clone https://github.com/blockchain-src/cursor-free-vip.git
+cd cursor-free-vip
+chmod +x install.sh
+./install.sh
 ```
+</details>
 
-### **Windows**
+<details open>
+<summary><b>Windows</b></summary>
 
-请以管理员身份启动 PowerShell，依次执行以下命令：
+> ⚠️ **请以管理员身份启动 PowerShell，依次执行以下命令：**
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope CurrentUser
-git clone https://github.com/blockchain-src/cursor-free-vip.git #确保你已经安装了git,才能执行此命令
+git clone https://github.com/blockchain-src/cursor-free-vip.git # 需先安装 git
 cd cursor-free-vip
 .\install.ps1
 ```
+</details>
 
-<p align="center">
-  <img src="./images/product_2025-04-16_10-40-21.png" alt="new" width="800" style="border-radius: 6px;"/><br>
-</p>
+---
 
+## 🤖 **互动式操作说明**
+
+1. 输入 `3`，**关闭 Cursor 应用**。
+2. 输入 `1`，**重置机器 ID**。
+3. 输入 `2`、`5` 或 `6`，**注册 Cursor 账户**。
+   > 如遇问题，也可前往官网 [https://www.cursor.com/cn](https://www.cursor.com/cn) 手动注册。
+4. 打开客户端"文件-首选项-Cursor settings"，点击 **log in**，连接官网账户。
+
+---
+
+<div align="center">
+  <img src="https://github.com/yeongpin/cursor-free-vip/blob/main/images/product_2025-04-16_10-40-21.png" alt="new" width="800" style="border-radius: 8px; margin-top: 10px;"/>
 </div>
 
-<summary><b>⭐ 互动式操作</b></summary>
+---
 
-1. 输入 `3`，关闭 Cursor 应用。
-2. 输入 `1`，重置机器 ID。
-3. 输入 `2`、`5` 或 `6`，注册 Cursor 账户。  
-   > 如遇问题，也可前往官网 [https://www.cursor.com/cn](https://www.cursor.com/cn) 手动注册。
-4. 打开客户端“文件-首选项-Cursor settings”，点击 **log in** 账户，连接官网账户。
+## ❓ **常见问题**
+
+- 如遇权限或网络问题，请以管理员身份运行终端，并确保网络畅通。
+- 更多帮助请访问 [项目主页](https://github.com/blockchain-src/cursor-free-vip) 或提交 issue。
+
+---
+
+> 💡 **如需进一步美化或有特殊需求，欢迎联系作者！**
