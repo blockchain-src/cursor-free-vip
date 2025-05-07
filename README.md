@@ -52,25 +52,22 @@
   <img src="connection_failed.png" alt="client" width="500" style="border-radius: 8px; margin-top: 10px;"/>
 </div>
 
-请打开"文件-首选项-Cursor settings"中点击 **log out** 退出账户。
+请先打开"文件-首选项-Cursor settings"中点击 **log out** 退出账户，然后执行以下操作。
 
 ---
 
 ### 根据系统环境下载并运行脚本
 
 <details>
-<summary><b>Linux / WSL / macOS</b></summary>
+<summary><b>Linux / WSL / macOS 系统</b></summary>
 
 ```bash
-git clone https://github.com/blockchain-src/cursor-free-vip.git
-cd cursor-free-vip
-chmod +x install.sh
-./install.sh
+git clone https://github.com/blockchain-src/cursor-free-vip.git && cd cursor-free-vip && chmod +x install.sh && ./install.sh
 ```
 </details>
 
 <details open>
-<summary><b>Windows</b></summary>
+<summary><b>Windows 系统</b></summary>
 
 > ⚠️ **请以管理员身份启动 PowerShell，依次执行以下命令：**
 
