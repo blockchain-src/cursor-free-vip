@@ -1,7 +1,7 @@
-# ✨ **Cursor Free VIP 简单教程**
+# ✨ **Cursor Free VIP 教程**
 
 <div align="center">
-  <img src="./images/logo.png" alt="Cursor Pro Logo" width="180" style="border-radius: 8px; margin-bottom: 10px;"/>
+  <img src="https://github.com/yeongpin/cursor-free-vip/blob/main/images/logo.png" alt="Cursor Pro Logo" width="180" style="border-radius: 8px; margin-bottom: 10px;"/>
 </div>
 
 <p align="center">
@@ -39,14 +39,24 @@
 
 ## 🚀 **快速开始**
 
-### 1️⃣ 前提条件
+### 前提条件
 
-- 已安装 [Cursor 客户端](https://www.cursor.com/cn)
-- 已登录 Cursor 账户（如已登录，建议先在"文件-首选项-Cursor settings"中点击 **log out** 退出账户）
+- 已安装 [Cursor 客户端](https://www.cursor.com/cn)，如下图
+
+<div align="center">
+  <img src="Client.png" alt="client" width="800" style="border-radius: 8px; margin-top: 10px;"/>
+</div>
+
+- 如果 chat 窗口出现以下限制，如下图
+<div align="center">
+  <img src="connection_failed.png" alt="client" width="500" style="border-radius: 8px; margin-top: 10px;"/>
+</div>
+
+请打开"文件-首选项-Cursor settings"中点击 **log out** 退出账户。
 
 ---
 
-### 2️⃣ 下载并运行脚本
+### 根据系统环境下载并运行脚本
 
 <details>
 <summary><b>Linux / WSL / macOS</b></summary>
@@ -74,19 +84,18 @@ cd cursor-free-vip
 
 ---
 
-## 🤖 **互动式操作说明**
-
-1. 输入 `3`，**关闭 Cursor 应用**。
-2. 输入 `1`，**重置机器 ID**。
-3. 输入 `2`、`5` 或 `6`，**注册 Cursor 账户**。
-   > 如遇问题，也可前往官网 [https://www.cursor.com/cn](https://www.cursor.com/cn) 手动注册。
-4. 打开客户端"文件-首选项-Cursor settings"，点击 **log in**，连接官网账户。
-
----
+### 🤖 **互动式操作步骤**
 
 <div align="center">
   <img src="https://github.com/yeongpin/cursor-free-vip/blob/main/images/product_2025-04-16_10-40-21.png" alt="new" width="800" style="border-radius: 8px; margin-top: 10px;"/>
 </div>
+
+---
+1. 输入 `3`，**关闭 Cursor 应用**。
+2. 输入 `1`，**重置机器 ID**。
+3. 输入 `2`、`5` 或 `6`，**注册 Cursor 账户**。
+   > 如遇问题，也可前往官网 [https://www.cursor.com/cn](https://www.cursor.com/cn) 手动注册。
+4. 打开客户端"文件-首选项-Cursor settings"，点击 **log in**，连接官网账户，便可重新激活 VIP 功能。
 
 ---
 
