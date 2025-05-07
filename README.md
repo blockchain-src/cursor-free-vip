@@ -93,7 +93,7 @@ cd cursor-free-vip
    > 如遇问题，也可前往官网 [https://www.cursor.com/cn](https://www.cursor.com/cn) 手动注册。
 4. 打开客户端"文件-首选项-Cursor settings"，点击 **log in**，连接官网账户。
 
-**🎉🎉完成以上，便可重新激活 VIP 功能。**
+**🎉🎉完成以上，即可重新激活 VIP 功能。**
 
 ---
 
