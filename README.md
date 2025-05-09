@@ -51,7 +51,7 @@
 <div align="center">
   <img src="connection_failed.png" alt="client" width="500" style="border-radius: 8px; margin-top: 10px;"/>
 </div>
-
+或者
 <div align="center">
   <img src="error.png" alt="client" width="500" style="border-radius: 8px; margin-top: 10px;"/>
 </div>
