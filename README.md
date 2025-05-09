@@ -47,11 +47,14 @@
   <img src="Client.png" alt="client" width="800" style="border-radius: 8px; margin-top: 10px;"/>
 </div>
 
-- 如果 chat 窗口出现以下限制，如下图
+- 如果使用 chat 时出现以下限制，如下图
 <div align="center">
   <img src="connection_failed.png" alt="client" width="500" style="border-radius: 8px; margin-top: 10px;"/>
 </div>
 
+<div align="center">
+  <img src="error.png" alt="client" width="500" style="border-radius: 8px; margin-top: 10px;"/>
+</div>
 请先打开"文件-首选项-Cursor settings"中点击 **log out** 退出账户，然后执行以下操作。
 
 ---
