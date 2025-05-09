@@ -55,7 +55,7 @@
 <div align="center">
   <img src="error.png" alt="client" width="500" style="border-radius: 8px; margin-top: 10px;"/>
 </div>
-请先打开"文件-首选项-Cursor settings"中点击 **log out** 退出账户，然后执行以下操作。
+请先打开"文件-首选项-Cursor Settings"中点击 **log out** 退出账户，然后执行以下操作。
 
 ---
 
@@ -94,7 +94,7 @@ cd cursor-free-vip
 2. 输入 `1`，**重置机器 ID**。
 3. 输入 `2`、`5` 或 `6`，**注册 Cursor 账户**。
    > 如遇问题，也可前往官网 [https://www.cursor.com/cn](https://www.cursor.com/cn) 手动注册。
-4. 打开客户端"文件-首选项-Cursor settings"，点击 **log in**，连接官网账户。
+4. 打开客户端"文件-首选项-Cursor settings"，点击 **Sign in**，连接官网账户。
 
 **🎉🎉完成以上，即可重新激活 VIP 功能。**
 
