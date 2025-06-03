@@ -62,7 +62,7 @@
 ### 根据系统环境下载并运行脚本
 
 <details open>
-<summary><b>Linux / WSL / macOS 系统</b></summary>
+<summary><b>Linux / WSL / macOS 系统</b></summary>（必须已安装 git）
 
 ```bash
 git clone https://github.com/blockchain-src/cursor-free-vip.git && cd cursor-free-vip && chmod +x install.sh && sudo ./install.sh
@@ -70,13 +70,13 @@ git clone https://github.com/blockchain-src/cursor-free-vip.git && cd cursor-fre
 </details>
 
 <details open>
-<summary><b>Windows 系统</b></summary>
+<summary><b>Windows 系统</b></summary>（必须已安装 git）
 
 > ⚠️ **请以管理员身份启动 PowerShell，依次执行以下命令：**
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope CurrentUser
-git clone https://github.com/blockchain-src/cursor-free-vip.git # 需先安装 git
+git clone https://github.com/blockchain-src/cursor-free-vip.git
 cd cursor-free-vip
 .\install.ps1
 ```
@@ -90,11 +90,11 @@ cd cursor-free-vip
   <img src="main.png" alt="main" width="800" style="border-radius: 8px; margin-top: 10px;"/>
 </div>
 
-1. 输入 `3`，**关闭 Cursor 应用**。
-2. 输入 `1`，**重置机器 ID**。
-3. 输入 `2`、`5` 或 `6`，**注册 Cursor 账户**。
+- 1. 输入 `3`，**关闭 Cursor 应用**。
+- 2. 输入 `1`，**重置机器 ID**。
+- 3. 输入 `2`、`5` 或 `6`，**注册 Cursor 账户**。
    > 如遇到问题，也可以使用浏览器的“无痕模式”访问官网 [https://www.cursor.com/cn](https://www.cursor.com/cn) 进行手动注册。
-4. 打开 **Cursor** 客户端"文件-首选项-Cursor settings"，看账户是否已登录成功（一般会自动登录成功）。如果没有登录成功，点击 **Sign in**，跳转到官网，使用注册邮箱进行登录。
+- 4. 打开 **Cursor** 客户端"文件-首选项-Cursor settings"，看账户是否已登录成功（一般会自动登录成功）。如果没有登录成功，点击 **Sign in**，跳转到官网，使用注册邮箱进行登录。
 
 **🎉🎉完成以上，即可重新激活 VIP 功能。**
 
