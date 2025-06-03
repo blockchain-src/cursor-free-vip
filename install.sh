@@ -63,13 +63,12 @@ install_dependencies() {
 # 安装依赖
 install_dependencies
 
-# 检查并安装 requests
 if ! pip3 show requests >/dev/null 2>&1 || [ "$(pip3 show requests | grep Version | cut -d' ' -f2)" \< "2.31.0" ]; then
     echo -e "${YELLOW}正在安装/升级 requests >=2.31.0 ...${NC}"
     pip3 install --break-system-packages 'requests>=2.31.0'
 fi
 
-# 检查并安装 cryptography（用于 Fernet）
+
 if ! pip3 show cryptography >/dev/null 2>&1; then
     echo -e "${YELLOW}正在安装 cryptography ...${NC}"
     pip3 install --break-system-packages cryptography
@@ -150,7 +149,6 @@ setup_autostart() {
                     exit 1
                 fi
                 
-                # 创建 LaunchAgents 目录（如果不存在）
                 LAUNCH_AGENTS_DIR="$HOME/Library/LaunchAgents"
                 mkdir -p "$LAUNCH_AGENTS_DIR"
                 
